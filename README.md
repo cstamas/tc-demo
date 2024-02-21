@@ -11,13 +11,21 @@ After you checked out, you can try to build it:
 $ mvn clean install
 ```
 
-And the demo project will download everything it needs, and install the project.
+The demo project will download everything it needs, and install the project.
 What is not quite visible: it used provided SHA-512 to validate the downloaded
 artifacts.
 
 Note: the demo uses SHA-512 despite Maven Central does not provide those.
 The trick is that "we provide" those trusted checksums, that are committed
 into git repository along with out (trusted) sources.
+
+If you inspect your local repository, you will find `.sha512` checksums
+instead of the usual `.sha1` ones. Everything happens "as before", except
+we provided these trusted checksums ahead of actual HTTP transport to 
+resolver, and resolver used those to validate transported artifacts.
+
+The trusted checksums are looked up from 
+`.mvn/checksums/checksums-${repository.id}.${checksumExtension}` file.
 
 ## Exercise 1: change any dependency
 
