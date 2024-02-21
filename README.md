@@ -23,7 +23,8 @@ into git repository along with out (trusted) sources.
 
 Try to change the version of some dependency in POM, and rebuild.
 
-It will fail, as "fail if missing" is enabled.
+It will fail, as "fail if missing" is enabled: if checksum not found,
+the build will fail (as resolution will be prevented).
 
 ## Exercise 2: add new dependencies
 
