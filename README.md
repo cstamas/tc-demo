@@ -57,3 +57,5 @@ Naturally, you can manually edit the `checksums-central.sha512`, or, if you noti
 file format is compatible to that of GNU Binutils, so you can even use those tools
 to produce the files.
 
+In **real life** it is advisable to user Maven Wrapper and use Enforcer to enforce Maven
+version allowed to build project.
