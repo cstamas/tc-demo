@@ -8,7 +8,7 @@ full download (as post checkout, this directory is not present).
 
 After you checked out, you can try to build it:
 ```
-$ mvn clean install
+$ ./mvnw clean install
 ```
 
 The demo project will download everything it needs, and install the project.
@@ -42,7 +42,7 @@ just like in Exercise 1.
 If you want to "add" dependencies, enable "recording":
 
 ```
-mvn clean install -Daether.artifactResolver.postProcessor.trustedChecksums.record
+$ ./mvnw clean install -Daether.artifactResolver.postProcessor.trustedChecksums.record
 ```
 
 At the build end, you will see following message:
