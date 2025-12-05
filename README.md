@@ -67,3 +67,5 @@ Inspect classpath of certain dependency:
 $ ./mvnw toolbox:0.14.7:gav-copy -DsourceSpec="resolveTransitive(gav(com.google.inject:guice:4.2.0))" -DsinkSpec="stat()"
 ```
 Note: you MUST use this explicit version of toolbox, as it is ALSO locked down by checksums!
+
+More about Toolbox here: https://maveniverse.eu/docs/toolbox/
