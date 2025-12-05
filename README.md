@@ -59,3 +59,11 @@ to produce the files.
 
 In **real life** it is advisable to user Maven Wrapper and use Enforcer to enforce Maven
 version allowed to build project.
+
+## Extras
+
+Inspect classpath of certain dependency:
+```
+$ ./mvnw toolbox:0.14.7:gav-copy -DsourceSpec="resolveTransitive(gav(com.google.inject:guice:4.2.0))" -DsinkSpec="stat()"
+```
+Note: you MUST use this explicit version of toolbox, as it is ALSO locked down by checksums!
